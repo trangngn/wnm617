@@ -1,0 +1,53 @@
+<html>
+	
+	<head>
+		
+		<title></title>
+		<script type="text/javascript" src="catalog.json">
+		</script>
+
+	</head>
+	<body>
+		<div id="gallery" class="gallery"></div>
+
+
+
+		<script type="text/javascript">
+			
+			let gallery = document.getElementById( 'gallery' );
+
+			for( let id in db.books ) {
+				console.log( "this book's ID", id );
+
+				let book = db.books[ id ];
+
+				let bookHTML = document.createElement( 'div' );
+				bookHTML.id = id;
+				
+				let bookTitle = document.createElement( 'h1' );
+				bookTitle.innerText = book.title;
+
+
+				let bookAuthors = document.createElement( 'p' );
+				bookAuthors.innerText = book.authors;
+
+				let bookGenres = document.createElement( 'p' );
+				bookGenres.innerText = book.genres;
+				bookGenres.classList = "genres details";
+
+				let bookLanguage = document.createElement( 'p' );
+				bookLanguage.innerText = book.language;
+
+
+				bookHTML.appendChild( bookTitle );
+				bookHTML.appendChild( bookAuthors );
+				bookHTML.appendChild( bookGenres );
+				bookHTML.appendChild( bookLanguage );
+
+				gallery.appendChild( bookHTML );
+			}
+
+		</script>
+	</body>
+
+</html>
