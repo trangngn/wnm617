@@ -1,0 +1,121 @@
+var db = {
+	"books": {
+		"id_10000": {
+			"title": "Lay of the Last Minstrel",
+			"language": "English",
+			"totaltime": "02:53:26",
+			"url_librivox": "http://librivox.org/the-lay-of-the-last-minstrel-by-sir-walter-scott/",
+			"url_iarchive": "http://archive.org/details/lastminstrel_1508_librivox",
+			"readers": ["8799"],
+			"authors": "491",
+			"genres": "Single author",
+			"publicdate": "2015-08-21 19:32:28",
+			"downloads": 729,
+			"status": "3"
+		},
+		"id_10001": {
+			"title": "Beauty Making",
+			"language": "English",
+			"totaltime": "00:23:29",
+			"url_librivox": "http://librivox.org/beauty-making-by-ella-wheeler-wilcox/",
+			"url_iarchive": "http://archive.org/details/beauty_making_1506.poem_librivox",
+			"readers": ["10062", "10115", "1212", "2911", "3645", "4738", "4744", "6965", "8011", "8051", "8425", "8786", "9331", "9872", "9902"],
+			"authors": "340",
+			"genres": "Multi-version (Weekly and Fortnightly poetry)",
+			"publicdate": "2015-06-21 11:43:45",
+			"downloads": 1528,
+			"status": -1
+		},
+		"id_10002": {
+			"title": "Wonder Book for Girls and Boys",
+			"language": "English",
+			"totaltime": "05:08:41",
+			"url_librivox": "http://librivox.org/a-wonder-book-for-girls-and-boys-by-nathaniel-hawthorne/",
+			"url_iarchive": "http://archive.org/details/wonderbook_1509_librivox",
+			"readers": ["2198"],
+			"authors": "11",
+			"genres": "Short works",
+			"publicdate": "2015-09-12 13:12:07",
+			"downloads": 4137,
+			"status": -1
+		},
+		"id_10003": {
+			"title": "Rose Garden Husband",
+			"language": "English",
+			"totaltime": "04:26:45",
+			"url_librivox": "http://librivox.org/the-rose-garden-husband-by-margaret-widdemer/",
+			"url_iarchive": "http://archive.org/details/rose_garden_husband_1508_librivox",
+			"readers": ["4800"],
+			"authors": "11447",
+			"genres": "Family Life",
+			"publicdate": "2015-08-26 01:03:06",
+			"downloads": 11531,
+			"status": -1
+		},
+		"id_10004": {
+			"title": "Herapath Property",
+			"language": "English",
+			"totaltime": "08:22:01",
+			"url_librivox": "http://librivox.org/the-herapath-property-by-j-s-fletcher/",
+			"url_iarchive": "http://archive.org/details/theherapathproperty_1512_librivox",
+			"readers": ["4078"],
+			"authors": "1068",
+			"genres": "Crime & Mystery Fiction",
+			"publicdate": "2015-12-06 02:48:18",
+			"downloads": 12560,
+			"status": -1
+		},
+		"id_10005": {
+			"title": "Gold",
+			"language": "English",
+			"totaltime": "12:09:11",
+			"url_librivox": "http://librivox.org/gold-by-stewart-edward-white/",
+			"url_iarchive": "http://archive.org/details/gold_1601_librivox",
+			"readers": ["4078"],
+			"authors": "1440",
+			"genres": "General Fiction",
+			"publicdate": "2016-01-03 13:29:13",
+			"downloads": 2444,
+			"status": -1
+		},
+		"id_10006": {
+			"title": "Sammlung deutscher Gedichte 019",
+			"language": "German",
+			"totaltime": "00:30:04",
+			"url_librivox": "http://librivox.org/sammlung-deutscher-gedichte-019-by-various/",
+			"url_iarchive": "http://archive.org/details/sammlung_deutscher_gedichte_019_1510_librivox",
+			"readers": ["10148", "10191", "10317", "2037", "5424", "5753"],
+			"authors": "18",
+			"genres": "Anthologies",
+			"publicdate": "2015-10-27 06:34:57",
+			"downloads": 48270,
+			"status": -1
+		},
+		"id_10007": {
+			"title": "Light on the Path",
+			"language": "English",
+			"totaltime": "00:39:35",
+			"url_librivox": "http://librivox.org/light-on-the-path-by-mabel-collins/",
+			"url_iarchive": "http://archive.org/details/lightonthepath_1506_librivox",
+			"readers": ["9872"],
+			"authors": "11448",
+			"genres": "Religion",
+			"publicdate": "2015-06-20 17:35:09",
+			"downloads": 2329,
+			"status": -1
+		},
+		"id_10009": {
+			"title": "No Animal Food and Nutrition and Diet with Vegetable Recipes",
+			"language": "English",
+			"totaltime": "03:38:41",
+			"url_librivox": "http://librivox.org/no-animal-food-and-nutrition-and-diet-with-vegetable-recipes-by-rupert-h-wheldon/",
+			"url_iarchive": "http://archive.org/details/noanimalfood_1507_librivox",
+			"readers": ["9372"],
+			"authors": "11451",
+			"genres": "Health & Fitness",
+			"publicdate": "2015-07-04 02:11:01",
+			"downloads": 2418,
+			"status": -1
+		}
+	}
+};
