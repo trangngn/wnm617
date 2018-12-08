@@ -1,0 +1,94 @@
+<html>
+   <head>
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="static/css/signin.css">
+      <link href="static/css/nav.css" rel="stylesheet">
+   </head>
+   <body>
+
+        <header>
+          
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><img src="static/resources/nav/nav.jpg" width="30" height="30" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <li class="nav-item">
+        <a class="nav-link active" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Products</a>
+      </li>
+
+        </div>
+      </div>
+    </nav>
+
+        </header>
+
+
+    <div class="text-center">
+      <div class="container" id="signinform">
+         <div class="col-md-4 col-md-offset-4 col-sm-6">
+            <img class="mb-4" src="static/resources/nav/nav.jpg" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <div role="form" id="signup-form">
+               <div class="form-group">
+                  <!-- <label>Email</label> -->
+                  <input type="email" id="form-email" 
+                     class = "form-control" placeholder="Enter Email">
+               </div>
+               <div class="form-group">
+                  <!-- <label>Password</label> -->
+                  <input type="password" id="form-password" 
+                     class = "form-control" placeholder="Enter Password">
+               </div>
+               <div class="checkbox mb-3">
+                  <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                  </label>
+               </div>
+               
+              
+               <input type="submit" id="signup" class="btn btn-primary" 
+                  value="Sign Up" onclick="handleSignUp();">
+               <input type="submit" id="signin" class="btn btn-lg btn-primary btn-block" 
+                  value="Sign In" onclick="handleSignIn();">
+               <input type="submit" id="signout" class="btn btn-primary" 
+                  value="Sign Out" onclick="handleSignOut();">    
+                   <p class="mt-5 mb-3 text-muted">2018</p>
+            </div>
+         </div>
+      </div>
+      </div>
+
+    <footer class="footer bg-light" id="footer-height">
+      <div class="container">
+        <div class="text-center">
+        <span class="text-muted">Final project 2018</span>
+      </div>
+      </div>
+    </footer>
+
+      
+      
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBxbnHLQTFJHPTRLMhvD88A70NAxdmCcQk",
+    authDomain: "bok7-314bb.firebaseapp.com",
+    databaseURL: "https://bok7-314bb.firebaseio.com",
+    projectId: "bok7-314bb",
+    storageBucket: "",
+    messagingSenderId: "75637353165"
+  };
+  firebase.initializeApp(config);
+</script>
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="static/js/auth.js"></script>
+   </body>
+</html>
