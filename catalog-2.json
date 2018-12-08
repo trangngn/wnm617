@@ -116,6 +116,45 @@ var db = {
 			"publicdate": "2015-07-04 02:11:01",
 			"downloads": 2418,
 			"status": -1
+		},
+		"id_10010": {
+			"title": "Human Sacrifice",
+			"language": "English",
+			"totaltime": "1:54:12",
+			"url_librivox": "http://librivox.org/human-sacrifice-by-john-emerich-edward-dalberg-acton/",
+			"url_iarchive": "https://archive.org/details/humansacrifice_1507_librivox",
+			"readers": ["10118"],
+			"authors": "11452",
+			"genres": "History ",
+			"publicdate": "2015-07-09 03:01:01",
+			"downloads": 1046,
+			"status": -1
+		}, 
+		"id_10014": {
+			"title": "Song of the Broad-Axe - stanza 4",
+			"language": "English",
+			"totaltime": "00:27:50",
+			"url_librivox": "http://librivox.org/song-of-the-broad-axe-stanza-4-by-walt-whitman/",
+			"url_iarchive": "http://archive.org/details/song_of_the_broad-axe_stanza_4_1506.poem_librivox",
+			"readers": ["10104", "10124", "10134", "10140", "1212", "2911", "4738", "5468", "8011", "8051", "8071", "8425", "8786", "8879", "9331", "9872", "9902"],
+			"authors": "588",
+			"genres": "Multi-version (Weekly and Fortnightly poetry)",
+			"publicdate": "2015-06-28 15:18:39",
+			"downloads": 1666,
+			"status": -1
+		},
+		"id_10015": {
+			"title": "Poster-Painter's Masterpiece",
+			"language": "English",
+			"totaltime": "00:38:49",
+			"url_librivox": "http://librivox.org/the-poster-painters-masterpiece-by-sam-walter-foss/",
+			"url_iarchive": "http://archive.org/details/poster-painters_masterpiece_1507.poem_librivox",
+			"readers": ["10038", "10157", "2911", "4289", "4738", "6965", "8011", "8051", "8337", "8425", "8786", "9331", "9872", "9902"],
+			"authors": "1946",
+			"genres": "Multi-version (Weekly and Fortnightly poetry)",
+			"publicdate": "2015-07-05 11:36:47",
+			"downloads": 2060,
+			"status": -1
 		}
 	}
 }
