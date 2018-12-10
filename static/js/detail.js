@@ -1,12 +1,17 @@
 $(function() {
-	let book_id = getUrlVars()['id'];
-	let book_detail = getBooksDetail(book_id);
+	var book_detail = books[0];
+	for (var i = 0; i < books.length; i++) {
+		if (books[i].id == getUrlVars().id) {
+			book_detail = books[i];
+			break;
+		}
+	}
 
 	var detail_html = `
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="book">
-					<img src="https://images-na.ssl-images-amazon.com/images/I/31psjQoH6XL._SX327_BO1,204,203,200_.jpg" alt="book" class="img-thumbnail" width="250" height="300">
+					<img src="static/resources/home/book${book_detail.id}.png" alt="book" class="img-thumbnail" width="250" height="300">
 					<figure>
 						<audio controls src="static/resources/detail/audio.mp4">Your browser does not support the <code>audio</code> element.</audio>
 				</figure>
@@ -16,13 +21,12 @@ $(function() {
 			<div class="description">
 				<h3> <p class="font-weight-bold">${book_detail.title}</p></h3>
 				<h4><p class="text-secondary">Truth, Lies, and Leadership</p></h4>
-				<p class="text-secondary">By: James Comey</p>
-				<p class="text-secondary">Narrated by: James Comey</p>
-				<p class="text-secondary">Length: 9 hrs and 4 mins</p>
+				<p class="text-secondary">Written by: ${book_detail.authors[0].first_name} ${book_detail.authors[0].last_name}</p>
+				<p class="text-secondary">Length: ${book_detail.totaltime}</p>
 				<p class="text-secondary">Unabridged Audiobook</p>
-				<p class="text-secondary">Release date: 04-17-18</p>
-				<p class="text-secondary">Language: English</p>
-				<p class="text-secondary">Publisher: Macmillan Audio</p>
+				<p class="text-secondary">Copyright year: ${book_detail.copyright_year}</p>
+				<p class="text-secondary">${book_detail.language}</p>
+				<p class="text-secondary">${book_detail.description}</p>
 				<p class="text-secondary">4.8 (22,046 ratings)</p>
 				<ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star">
 				</div>

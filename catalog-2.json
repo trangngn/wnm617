@@ -2,6 +2,7 @@ var db = {
 	"books": {
 		"id_10000": {
 			"title": "Lay of the Last Minstrel",
+			"image":"static/resources/home/book1-1.png",
 			"language": "English",
 			"totaltime": "02:53:26",
 			"url_librivox": "http://librivox.org/the-lay-of-the-last-minstrel-by-sir-walter-scott/",
@@ -15,6 +16,7 @@ var db = {
 		},
 		"id_10001": {
 			"title": "Beauty Making",
+			"image":"static/resources/home/book1-2.png",
 			"language": "English",
 			"totaltime": "00:23:29",
 			"url_librivox": "http://librivox.org/beauty-making-by-ella-wheeler-wilcox/",
@@ -28,6 +30,7 @@ var db = {
 		},
 		"id_10002": {
 			"title": "Wonder Book for Girls and Boys",
+			"image":"static/resources/home/book1-3.png",
 			"language": "English",
 			"totaltime": "05:08:41",
 			"url_librivox": "http://librivox.org/a-wonder-book-for-girls-and-boys-by-nathaniel-hawthorne/",
@@ -41,6 +44,7 @@ var db = {
 		},
 		"id_10003": {
 			"title": "Rose Garden Husband",
+			"image":"static/resources/home/book1-4.png",
 			"language": "English",
 			"totaltime": "04:26:45",
 			"url_librivox": "http://librivox.org/the-rose-garden-husband-by-margaret-widdemer/",
@@ -54,6 +58,7 @@ var db = {
 		},
 		"id_10004": {
 			"title": "Herapath Property",
+			"image":"static/resources/home/book1-5.png",
 			"language": "English",
 			"totaltime": "08:22:01",
 			"url_librivox": "http://librivox.org/the-herapath-property-by-j-s-fletcher/",
@@ -67,6 +72,7 @@ var db = {
 		},
 		"id_10005": {
 			"title": "Gold",
+			"image":"static/resources/home/book1-6.png",
 			"language": "English",
 			"totaltime": "12:09:11",
 			"url_librivox": "http://librivox.org/gold-by-stewart-edward-white/",
@@ -80,6 +86,7 @@ var db = {
 		},
 		"id_10006": {
 			"title": "Sammlung deutscher Gedichte 019",
+			"image":"static/resources/home/book1-7.png",
 			"language": "German",
 			"totaltime": "00:30:04",
 			"url_librivox": "http://librivox.org/sammlung-deutscher-gedichte-019-by-various/",
@@ -93,6 +100,7 @@ var db = {
 		},
 		"id_10007": {
 			"title": "Light on the Path",
+			"image":"static/resources/home/book1-8.png",
 			"language": "English",
 			"totaltime": "00:39:35",
 			"url_librivox": "http://librivox.org/light-on-the-path-by-mabel-collins/",
@@ -106,6 +114,7 @@ var db = {
 		},
 		"id_10009": {
 			"title": "No Animal Food and Nutrition and Diet with Vegetable Recipes",
+			"image":"static/resources/home/book1-9.png",
 			"language": "English",
 			"totaltime": "03:38:41",
 			"url_librivox": "http://librivox.org/no-animal-food-and-nutrition-and-diet-with-vegetable-recipes-by-rupert-h-wheldon/",
@@ -119,6 +128,7 @@ var db = {
 		},
 		"id_10010": {
 			"title": "Human Sacrifice",
+			"image":"static/resources/home/book1-10.png",
 			"language": "English",
 			"totaltime": "1:54:12",
 			"url_librivox": "http://librivox.org/human-sacrifice-by-john-emerich-edward-dalberg-acton/",
@@ -132,6 +142,7 @@ var db = {
 		}, 
 		"id_10014": {
 			"title": "Song of the Broad-Axe - stanza 4",
+			"image":"static/resources/home/book1-11.png",
 			"language": "English",
 			"totaltime": "00:27:50",
 			"url_librivox": "http://librivox.org/song-of-the-broad-axe-stanza-4-by-walt-whitman/",
@@ -145,6 +156,7 @@ var db = {
 		},
 		"id_10015": {
 			"title": "Poster-Painter's Masterpiece",
+			"image":"static/resources/home/book1-12.png",
 			"language": "English",
 			"totaltime": "00:38:49",
 			"url_librivox": "http://librivox.org/the-poster-painters-masterpiece-by-sam-walter-foss/",

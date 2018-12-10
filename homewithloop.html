@@ -12,6 +12,23 @@
 	<title>BOK. 7 || Audio Book Store</title>
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#"><img src="static/resources/nav/nav.jpg" width="50" height="50" alt=""></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Products</a>
+				</li>
+
+			</div>
+		</div>
+	</nav>
 	<div class="wrapper m-0 mx-auto">
 		<div class="container-fluid">  
 			<nav class="navbar navbar-dark bg-dark p-2">
@@ -148,6 +165,13 @@
 
 		</div><!-- Container fluid end -->
 	</div> <!-- wrapper end -->
+	<footer class="footer bg-light" id="footer-height">
+		<div class="container">
+			<div class="text-center">
+				<span class="text-muted">Final project 2018</span>
+			</div>
+		</div>
+	</footer>
 
 
 
@@ -192,7 +216,7 @@
 			bookHTML.appendChild( bookTitleDiv );
 			bookCARD.classList.add("card");
 			bookCARD.setAttribute("style","width: 8rem;");
-			bookCARD.innerHTML="<img class='card-img-top' src='static/resources/home/sample-book.jpeg' alt='Card image cap'><div class='audio-play text-center card-body p-1 '><p class='card-text'><i class='far fa-play-circle'></i> Simple</p></div>";
+			bookCARD.innerHTML= "<img class='card-img-top' src='static/resources/home/sample-book.jpeg' alt='Card image cap'><div class='audio-play text-center card-body p-1 '><p class='card-text'><i class='far fa-play-circle'></i> Simple</p></div>";
 			bookTitleDiv.classList.add("book-title");
 			bookTitleDiv.setAttribute("style","width:8rem;");
 			bookTitleDiv.appendChild(bookTitle);
