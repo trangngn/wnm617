@@ -7,6 +7,7 @@ $(function() {
 		}
 	}
 
+//Function that help getting the html of the book item
 	var detail_html = `
 		<div class="row">
 			<div class="col-sm-6">

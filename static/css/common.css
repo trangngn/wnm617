@@ -16,3 +16,17 @@ body{
 #main-height{
 	height: 800px;
 }
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+	.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+}
+
