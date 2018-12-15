@@ -10,7 +10,7 @@ $(function() {
 					<div class="card" style="width: 8rem;">
 						<img class="card-img-top" src="static/resources/home/book${book.id}.png" alt="Card image cap">
 						<div class="audio-play text-center card-body p-1">
-							<p class="card-text"><i class="far fa-play-circle"></i> Simple</p>
+							<p class="card-text"><i class="far fa-play-circle"></i> Sample</p>
 						</div>
 					</div>
 					<div class="book-title">

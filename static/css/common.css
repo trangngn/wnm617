@@ -5,6 +5,10 @@ body{
     width: 100%;
 }
 
+.nav-link {
+	cursor: pointer;
+}
+
 .container-fluid {
 	padding-left: 0;
 	padding-right: 0;
@@ -21,12 +25,11 @@ body{
   box-sizing: content-box;
 }
 
-	.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   color: white;
-   text-align: center;
+.footer {
+	margin-top: 20px;
+	height: 60px;
+	color: white;
+	text-align: center;
+	line-height: 60px;
 }
 

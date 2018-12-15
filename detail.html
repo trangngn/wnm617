@@ -10,6 +10,7 @@
 	<link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'>
 	
 	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="static/css/common.css">
 	<link rel="stylesheet" href="static/css/detail.css">
 	<!-- <link rel="stylesheet" href="static/css/pay.css" /> -->
@@ -20,34 +21,27 @@
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			<div class="navbar-nav">
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-end">
 				<li class="nav-item">
-					<a class="nav-link active" href="home.html">Home</a>
+					<a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item active">
 					<a class="nav-link" href="detail.html">Products</a>
 				</li>
-				<div class="nav-link" id="signout" value="Sign Out" onclick="handleSignin();"><a href="sign-in.html">Sign in</a></div>
+			</ul>
 
-			</div>
+			<div class="nav-link" onClick="window.location='sign-in.html'">Sign In</div>
 		</div>
 	</nav>
-
-
-    </div>
 
 	<div class="container">
 		<div id="book-detail"></div>
 	</div>
-<!-- 
+
 	<footer class="footer bg-light" id="footer-height">
-		<div class="container">
-			<div class="text-center">
-				<span class="text-muted">Final project 2018</span>
-			</div>
-		</div>
-	</footer> -->
+		<span class="text-muted">Final project 2018</span>
+	</footer>
 
 
 	<script src="https://unpkg.com/ionicons@4.4.8/dist/ionicons.js"></script>
@@ -66,20 +60,19 @@
 	<script type="text/javascript" src="static/resources/books.js"></script>
 	<script type="text/javascript" src="static/js/api.js"></script>
 	<script type="text/javascript" src="static/js/detail.js"></script>
-	<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBxbnHLQTFJHPTRLMhvD88A70NAxdmCcQk",
-    authDomain: "bok7-314bb.firebaseapp.com",
-    databaseURL: "https://bok7-314bb.firebaseio.com",
-    projectId: "bok7-314bb",
-    storageBucket: "",
-    messagingSenderId: "75637353165"
-  };
-  firebase.initializeApp(config);
-</script>
-       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-      <script src="static/js/auth.js"></script>
+	<script type="text/javascript" src="static/js/auth.js"></script>
 
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyBxbnHLQTFJHPTRLMhvD88A70NAxdmCcQk",
+	    authDomain: "bok7-314bb.firebaseapp.com",
+	    databaseURL: "https://bok7-314bb.firebaseio.com",
+	    projectId: "bok7-314bb",
+	    storageBucket: "",
+	    messagingSenderId: "75637353165"
+	  };
+	  firebase.initializeApp(config);
+	</script>
 </body>
 </html>

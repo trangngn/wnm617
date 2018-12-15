@@ -3,9 +3,13 @@ audio
 width:250px;
 }
 
-.btn {
+.pay-btn {
 	width:250px;
 	background: #f19943;
+}
+
+.book-description-collapsible-btn {
+	display: none;
 }
 
 button a {
@@ -13,6 +17,6 @@ button a {
 }
 
 button:hover {
-    background: #f19943;
-  }
+  background: #f19943;
+}
   
