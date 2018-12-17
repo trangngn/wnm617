@@ -175,7 +175,7 @@ var books =
      "authors":[  
         {  
            "id":"335",
-           "first_name":"William Butler",
+           "first_name":"William",
            "last_name":"Yeats",
            "dob":"1865",
            "dod":"1939"
@@ -200,7 +200,7 @@ var books =
      "authors":[  
         {  
            "id":"37",
-           "first_name":"William",
+           "first_name":"W.",
            "last_name":"Shakespeare",
            "dob":"1564",
            "dod":"1616"
@@ -225,7 +225,7 @@ var books =
      "authors":[  
         {  
            "id":"1490",
-           "first_name":"Charles H.",
+           "first_name":"Charles",
            "last_name":"Spurgeon",
            "dob":"1834",
            "dod":"1892"
