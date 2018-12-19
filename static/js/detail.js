@@ -12,36 +12,33 @@ $(function() {
 	//Display initial data
 	var detail_html = `	
 		<div class="row mt-5">
-			<div class="col-sm-3 col-md-4 offset-md-2">
-				<div class="book">
+			<div class="col-sm-6 col-md-4 offset-lg-2">
+				<div class="book sticky-top">
 					<img src="static/resources/home/book${book_detail.id}.png" alt="book" class="img-thumbnail" width="250" height="300">
 					<figure>
-
-					<button type="button" class="btn pay-btn mt-4"><a href="pay.html">Purchase</a></button>
-
-					<div class="mt-3">
-						<audio controls src="static/resources/detail/audio.mp4">Your browser does not support the <code>audio</code> element.</audio>
-					</div>
-					
-				</figure>
+						<button type="button" class="btn pay-btn mt-4"><a href="pay.html">Purchase</a></button>
+					</figure>
+				</div>
 			</div>
-		</div>
 
-		<div class="col-sm-6 col-md-6">
-			<div class="description">
-				<h3> <p class="font-weight-bold">${book_detail.title}</p></h3>
-				<h4><p class="text-secondary">Truth, Lies, and Leadership</p></h4>
-				<p class="text-secondary">Written by: ${book_detail.authors[0].first_name} ${book_detail.authors[0].last_name}</p>
-				<p class="text-secondary">Length: ${book_detail.totaltime}</p>
-				<p class="text-secondary">Unabridged Audiobook</p>
-				<p class="text-secondary">Copyright year: ${book_detail.copyright_year}</p>
-				<p class="text-secondary">${book_detail.language}</p>
-				<p class="text-secondary">
-					<div class="book-description text-secondary">${book_detail.description}</div>
-					<button type="button" class="btn btn-info book-description-collapsible-btn"></button>
-				</p>
-				<p class="text-secondary">4.8 (22,046 ratings)</p>
-				<ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star">
+			<div class="col-sm-6 col-md-6 offset-md-2 offset-lg-0 offset-sm-0">
+				<div class="description">
+					<h3> <p class="font-weight-bold">${book_detail.title}</p></h3>
+					<h4><p class="text-secondary">Truth, Lies, and Leadership</p></h4>
+					<p class="text-secondary">Written by: ${book_detail.authors[0].first_name} ${book_detail.authors[0].last_name}</p>
+					<p class="text-secondary">Length: ${book_detail.totaltime}</p>
+					<p class="text-secondary">Unabridged Audiobook</p>
+					<p class="text-secondary">Copyright year: ${book_detail.copyright_year}</p>
+					<p class="text-secondary">${book_detail.language}</p>
+					<p class="text-secondary">
+						<div class="book-description text-secondary">${book_detail.description}</div>
+						<button type="button" class="btn btn-info book-description-collapsible-btn"></button>
+					</p>
+					<p class="text-secondary">4.8 (22,046 ratings)</p>
+					<ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star">
+				</div>
+
+				<div class="audios">
 				</div>
 			</div>
 		</div>
@@ -72,5 +69,43 @@ $(function() {
 			$('.book-description').html(book_detail.description);
 			collapseBtn.html("Collapse");
 		}
+	}
+
+	//Get the chapter list audio and display it
+	var chapters = [];
+	getBookAudios(book_detail.url_rss, handleBookAudioCallback);
+
+	// Get the audios from the response and construct list of chapters from it
+	function handleBookAudioCallback(response) {
+		chapters = [];
+	  $(response).find('item').each(function(){
+	  	var chapter = {
+	  		"title": $(this).find('title').text(),
+	  		"duration": $(this).find('itunes\\:duration').text(),
+	  		"audio": $(this).find('enclosure').attr("url")
+	  	}
+	  	chapters.push(chapter);
+    });
+
+	  showAudios(chapters);
+	}
+
+	// Shows the audio in the pages
+	function showAudios(chapters) {
+		var htmlAudios = "<h3 class=\"sticky-top\">Chapters List</h3>";
+		for (var i = 0; i < chapters.length; i++) {
+			var chapter = chapters[i];
+			var htmlAudio = `
+				<div class="audio-item">
+					<div class="audio-title"><b>Chapter: </b>  ${chapter.title}</div>
+					<audio class="audio-play" controls src="${chapter.audio}">
+						Your browser does not support the <code>audio</code> element.
+					</audio>
+				</div>
+			`;
+
+			htmlAudios += htmlAudio;
+		}
+		$('.audios').html(htmlAudios);
 	}
 });

@@ -35,6 +35,14 @@ function getBooksDetail(id) {
  	return detail;
 }
 
+function getBookAudios(audioUrl, successCallback) {
+	let url = ESCAPE_URL + audioUrl;
+	$.ajax({
+ 		url: url, 
+ 		success: function (response) { successCallback(response); }
+	});
+}
+
 /**
  * Get the url parameter variables
  */
