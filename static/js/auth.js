@@ -1,70 +1,55 @@
 function handleSignUp() {
-    var email = document.getElementById('form-email').value;
-    var password = document.getElementById('form-password').value;
-    if(email.length < 4) {
-        alert('Please enter a valid email');
-        return;
-    }
-    if(password.length < 4) {
-        alert('Please enter a stronger password');
-        return;
-    }
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(function() {
-            //success
-            alert("User Name Created !!!");
-        })
-        .catch(function(error){
-            alert(error.message);
-        })
+	var email = document.getElementById('form-email').value;
+	var password = document.getElementById('form-password').value;
+	if(email.length < 4) {
+		alert('Please enter a valid email');
+		return;
+	}
+	if(password.length < 4) {
+		alert('Please enter a stronger password');
+		return;
+	}
+	firebase.auth().createUserWithEmailAndPassword(email, password)
+	.then(function() {
+    // then navigate to the homepage
+    localStorage.setItem('user', email);
+    window.location.href = "/home.html"
+  })
+	.catch(function(error){
+		alert(error.message);
+	})
 }
 function handleSignIn() {
-    var email = document.getElementById('form-email').value;
-    var password = document.getElementById('form-password').value;
-    firebase.auth().signInWithEmailAndPassword(email,password)
-        .then(function(user){
-            // handleLoggedIn(user);
-
-            console.log(user)
-            location.href = "home.html";
-        })
-        .catch(function(error){
-            alert(error.message);
-        })
-
-
-
+	var email = document.getElementById('form-email').value;
+	var password = document.getElementById('form-password').value;
+	firebase.auth().signInWithEmailAndPassword(email,password)
+	.then(function(user){
+    // then navigate to the homepage
+    window.location.href = "home.html"
+  })
+	.catch(function(error){
+		alert(error.message);
+	});
 }
 
-function handleLoggedIn(user){
+function handleLoggedIn(){
+	var user = firebase.auth().currentUser;
+  if(user != null){
+  	var email_id = user.email;
 
-    console.log(user)
+  	//change the nav item
+  	$('.signin-item').text(email_id);
 
-if (user) {
-    // User is signed in.
-
-    $("#signin").hide();
-    $("#signout").show();
-    // document.getElementById("signout").style.display = "block";
-    // document.getElementById("signin").style.display = "none";
-
-    var user = firebase.auth().currentUser;
-
-    if(user != null){
-
-      var email_id = user.email;
-      $("#user_para").html(email_id);
-
-    }
-
+  	//now change the sign-in page
+  	$('.signin-view').hide();
+		$('.signout-view').show();
   } else {
-    // No user is signed in.
+  	//change the nav item
+  	$('.signin-item').text('Sign In');
 
-    $("#signin").show();
-    $("#signout").hide();
-    // document.getElementById("signout").style.display = "none";
-    // document.getElementById("signin").style.display = "block";
-
+  	//now change the sign-out page
+  	$('.signin-view').show();
+		$('.signout-view').hide();
   }
 }
 
@@ -73,15 +58,15 @@ if (user) {
 
 function handleSignOut(){
 	firebase.auth().signOut().then(function(){
-            alert("Sign Out Success !!!");
-        })
-        .catch(function(error){
-            console.error('Sign Out error'.error);
-        })
-
-      
+		alert("Sign Out Success !!!");
+	})
+	.catch(function(error){
+		console.error('Sign Out error'.error);
+	})
 }
 
 $(function(){
-    firebase.auth().onAuthStateChanged(handleLoggedIn);
+	handleLoggedIn();
+	firebase.auth().onAuthStateChanged(handleLoggedIn);
 })
+

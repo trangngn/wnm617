@@ -4,6 +4,7 @@
 	max-width: 450px;
 	margin-left: auto;
 	margin-right: auto;
+	min-height: calc(100vh - 150px);
 }
 
 /*

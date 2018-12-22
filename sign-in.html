@@ -50,7 +50,7 @@
 					<a class="nav-link" href="detail.html">Products</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="sign-in.html">Sign In</a>
+					<a class="nav-link signin-item" href="sign-in.html">Sign In</a>
 				</li>
 			</ul>
 		</div>
@@ -61,29 +61,34 @@
 			<img class="mb-4" src="static/resources/nav/nav.jpg" alt="" width="72" height="72">
 			<h1 class="h3 mb-3 font-weight-normal"></h1>
 			<div role="form" id="signup-form">
-				<div class="form-group">
-					<!-- <label>Email</label> -->
-					<input type="email" id="form-email" 
-					class = "form-control" placeholder="Enter Email">
-				</div>
-				<div class="form-group">
-					<!-- <label>Password</label> -->
-					<input type="password" id="form-password" 
-					class = "form-control" placeholder="Enter Password">
-				</div>
-				<div class="checkbox mb-3">
-					<label>
-						<input type="checkbox" value="remember-me"> Remember me
-					</label>
+				<div class="signin-view">
+					<div class="form-group">
+						<!-- <label>Email</label> -->
+						<input type="email" id="form-email" 
+						class = "form-control" placeholder="Enter Email">
+					</div>
+					<div class="form-group">
+						<!-- <label>Password</label> -->
+						<input type="password" id="form-password" 
+						class = "form-control" placeholder="Enter Password">
+					</div>
+					<div class="checkbox mb-3">
+						<label>
+							<input type="checkbox" value="remember-me"> Remember me
+						</label>
+					</div>
+
+					<input type="submit" id="signin" class="btn btn-lg btn-primary btn-block" 
+					value="Sign In" onclick="handleSignIn();">
+					<p class="mt-3 text-muted">if you don't have an account, create one</p>
+					<input type="submit" id="signup" class="btn btn-lg btn-success btn-block" 
+					value="Sign Up" onclick="handleSignUp();">
 				</div>
 
-				<input type="submit" id="signin" class="btn btn-lg btn-primary btn-block" 
-				value="Sign In" onclick="handleSignIn();">
-				<p class="mt-3 text-muted">if you don't have an account, create one</p>
-				<input type="submit" id="signup" class="btn btn-lg btn-success btn-block" 
-				value="Sign Up" onclick="handleSignUp();">
-				<input type="submit" id="signout" class="btn btn-lg btn-primary btn-block" 
-				value="Sign Out" onclick="handleSignOut();">    
+				<div class="signout-view">
+					<input type="submit" id="signout" class="btn btn-lg btn-primary btn-block" 
+					value="Sign Out" onclick="handleSignOut();">
+				</div>   
 				<p class="mt-3 text-muted"></p>
 			</div>
 		</div>
