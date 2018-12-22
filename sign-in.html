@@ -1,118 +1,127 @@
 <html>
-   <head>
-    <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-     <link rel="short icon" href="static/resources/home/icon.png">
-     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.0/firebaseui.js"></script>
-<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.0/firebaseui.css" />
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="short icon" href="static/resources/home/icon.png">
+	<script src="https://cdn.firebase.com/libs/firebaseui/3.5.0/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.0/firebaseui.css" />
 
+	<link rel="stylesheet" href="static/css/signin.css">
+	<link href="static/css/nav.css" rel="stylesheet">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131259817-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
+	  gtag('config', 'UA-131259817-1');
+	</script>
 
-      <link rel="stylesheet" href="static/css/signin.css">
-      <link href="static/css/nav.css" rel="stylesheet">
-   </head>
-   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131259817-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<!-- Facebook analytics -->
+	<script>
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=148585231974007&autoLogAppEvents=1';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+</head>
 
-  gtag('config', 'UA-131259817-1');
-</script>
+<body>
 
-   <body>
+	<header>
 
-        <header>
-          
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-   <a class="navbar-brand" href="#"><img src="static/resources/nav/nav.jpg"  width="30" height="30" alt=""></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#"><img src="static/resources/nav/nav.jpg"  width="30" height="30" alt=""></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-  <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="detail.html">Products</a>
-      </li>
-    </ul>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="detail.html">Products</a>
+					</li>
+				</ul>
   <!--    <button onclick="handleSignIn()">SignIn</button>
-     <button onclick="handleSignOut()">SignOut</button> -->
+  	<button onclick="handleSignOut()">SignOut</button> -->
 
-</nav>
-        </header>
-
-
+  </nav>
+</header>
 
 
-      <div class="container" id="signinform" >
-         <div class="text-center">
-            <img class="mb-4" src="static/resources/nav/nav.jpg" alt="" width="72" height="72">
-            <h1 class="h3 mb-3 font-weight-normal"></h1>
-            <div role="form" id="signup-form">
-               <div class="form-group">
-                  <!-- <label>Email</label> -->
-                  <input type="email" id="form-email" 
-                     class = "form-control" placeholder="Enter Email">
-               </div>
-               <div class="form-group">
-                  <!-- <label>Password</label> -->
-                  <input type="password" id="form-password" 
-                     class = "form-control" placeholder="Enter Password">
-               </div>
-               <div class="checkbox mb-3">
-                  <label>
-                  <input type="checkbox" value="remember-me"> Remember me
-                  </label>
-               </div>
-               
-              
-               
-               <input type="submit" id="signin" class="btn btn-lg btn-primary btn-block" 
-                  value="Sign In" onclick="handleSignIn();">
-                      <p class="mt-3 text-muted">if you don't have an account, create one</p>
-                  <input type="submit" id="signup" class="btn btn-lg btn-success btn-block" 
-                  value="Sign Up" onclick="handleSignUp();">
-               <input type="submit" id="signout" class="btn btn-primary" 
-                  value="Sign Out" onclick="handleSignOut();">    
-                   <p class="mt-3 text-muted"></p>
-            </div>
-         </div>
-
-      </div>
 
 
-   <footer class="footer bg-light">
+<div class="container" id="signinform" >
+	<div class="text-center">
+		<img class="mb-4" src="static/resources/nav/nav.jpg" alt="" width="72" height="72">
+		<h1 class="h3 mb-3 font-weight-normal"></h1>
+		<div role="form" id="signup-form">
+			<div class="form-group">
+				<!-- <label>Email</label> -->
+				<input type="email" id="form-email" 
+				class = "form-control" placeholder="Enter Email">
+			</div>
+			<div class="form-group">
+				<!-- <label>Password</label> -->
+				<input type="password" id="form-password" 
+				class = "form-control" placeholder="Enter Password">
+			</div>
+			<div class="checkbox mb-3">
+				<label>
+					<input type="checkbox" value="remember-me"> Remember me
+				</label>
+			</div>
 
-        <p class="text-muted">Final project 2018</p>
 
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+			<input type="submit" id="signin" class="btn btn-lg btn-primary btn-block" 
+			value="Sign In" onclick="handleSignIn();">
+			<p class="mt-3 text-muted">if you don't have an account, create one</p>
+			<input type="submit" id="signup" class="btn btn-lg btn-success btn-block" 
+			value="Sign Up" onclick="handleSignUp();">
+			<input type="submit" id="signout" class="btn btn-primary" 
+			value="Sign Out" onclick="handleSignOut();">    
+			<p class="mt-3 text-muted"></p>
+		</div>
+	</div>
+
+</div>
+
+
+<footer class="footer bg-light">
+
+	<p class="text-muted">Final project 2018</p>
+
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-      
-      
+
+
 <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyBxbnHLQTFJHPTRLMhvD88A70NAxdmCcQk",
-    authDomain: "bok7-314bb.firebaseapp.com",
-    databaseURL: "https://bok7-314bb.firebaseio.com",
-    projectId: "bok7-314bb",
-    storageBucket: "",
-    messagingSenderId: "75637353165"
+  	apiKey: "AIzaSyBxbnHLQTFJHPTRLMhvD88A70NAxdmCcQk",
+  	authDomain: "bok7-314bb.firebaseapp.com",
+  	databaseURL: "https://bok7-314bb.firebaseio.com",
+  	projectId: "bok7-314bb",
+  	storageBucket: "",
+  	messagingSenderId: "75637353165"
   };
   firebase.initializeApp(config);
 </script>
 
-      <script src="static/js/auth.js"></script>
+<script src="static/js/auth.js"></script>
 
-   </body>
+</body>
 </html>

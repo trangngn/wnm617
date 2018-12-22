@@ -16,8 +16,8 @@ $(function() {
 				<div class="book sticky-top">
 					<img src="static/resources/home/book${book_detail.id}.jpg" alt="book" class="img-thumbnail" width="250" height="300">
 					<figure>
-					<div class="fb-like" data-href="http://katewustudio.com/wnm617/detail.js" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 						<button type="button" class="btn pay-btn mt-4"><a href="pay.html">Purchase</a></button>
+						<div class="fb-like" data-href="http://trangnguyen.us/wnm617/detail.js" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 					</figure>
 				</div>
 			</div>
