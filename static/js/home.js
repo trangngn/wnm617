@@ -28,7 +28,9 @@ $(function() {
 							</div>
 						</div>
 						<div class="book-title">
-							<p>
+							<p style="width:8rem; height:42px;margin-bottom:0px; font-weight: 900;">
+								${book.title}</p>
+							<p style="width:8rem;">
 								Written by:<br>${book.authors[0].first_name} ${book.authors[0].last_name}<br>
 								<i class="text-warning fas fa-star"></i>
 								<i class="text-warning fas fa-star"></i>
