@@ -8,7 +8,7 @@ $(function() {
 		var book_html = `
 				<div class="pl-2 pr-2" style="cursor:pointer;" onClick="window.location='detail.html?id=${book.id}';">
 					<div class="card" style="width: 8rem;">
-						<img class="card-img-top" src="static/resources/home/book${book.id}.png" alt="Card image cap">
+						<img class="card-img-top" src="static/resources/home/book${book.id}.jpg" alt="Card image cap">
 						<div class="audio-play text-center card-body p-1">
 							<p class="card-text"><i class="far fa-play-circle"></i> Sample</p>
 						</div>
