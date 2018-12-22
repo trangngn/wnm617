@@ -54,14 +54,14 @@
 				</li>
 			</ul>
 			<!-- search bar -->
-		    <!-- <div class="wrap">
-		       <div class="searchfunction">
-		          <input type="text" class="searchTerm search" id="search" placeholder="Search book title ...">
-		          <button type="submit" class="searchButton">
-		            <i class="fa fa-search"></i>
-		         </button>
-		       </div>
-		    </div> -->
+			    <div class="searchbar">
+			       <div class="searchfunction">
+				  <input type="text" class="searchTerm search" id="search" placeholder="Search book title ...">
+				  <button type="submit" class="searchButton">
+				    <i class="fa fa-search"></i>
+				 </button>
+			       </div>
+			    </div>
 		</div>
 	</nav>
 
@@ -207,6 +207,28 @@
 	<script type="text/javascript" src="static/resources/books.js"></script>
 	<script type="text/javascript" src="static/js/home.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+	<script>
+	/* search */
+
+	$('#search').keyup(function() {
+	    var searchField = $('#search').val();
+	    var myExp = new RegExp(searchField, "i");
+	    console.log(myExp);
+	    $('.books-container').html("");
+	    $.get('static/resources/books.json', function(data) {
+	    	console.log(data);
+			$.each(data.books,function(key, value){
+				// console.log(value.title);
+				
+				if((value.title).search(myExp) != -1){
+					console.log(value.id);
+					$('.books-container').append("<div class='pl-2 pr-2' style='cursor:pointer;' onClick=\"window.location='detail.html?id="+value.id+"';\"><div class='card' style='width: 8rem;'><img class='card-img-top' src='static/resources/home/book"+value.id+".jpg' alt='Card image cap'><div class='audio-play text-center card-body p-1'><p class='card-text'><i class='far fa-play-circle'></i> Simple</p></div></div><div class='book-title'><p>Written by:<br>"+value.authors[0].first_name+value.authors[0].last_name+"<br><i class='text-warning fas fa-star'></i><i class='text-warning fas fa-star'></i><i class='text-warning fas fa-star'></i><i class='text-warning fas fa-star'></i><i class='text-warning fas fa-star-half-alt'></i></p></div></div>");
+				}
+			});
+
+	    }); //get 
+	});
+	</script>
 	<script>
 	  // Initialize Firebase
 	  var config = {
