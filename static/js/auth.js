@@ -12,7 +12,6 @@ function handleSignUp() {
 	firebase.auth().createUserWithEmailAndPassword(email, password)
 	.then(function() {
     // then navigate to the homepage
-    localStorage.setItem('user', email);
     window.location.href = "home.html"
   })
 	.catch(function(error){
