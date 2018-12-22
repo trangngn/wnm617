@@ -207,6 +207,20 @@
 	<script type="text/javascript" src="static/resources/books.js"></script>
 	<script type="text/javascript" src="static/js/home.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	  	apiKey: "AIzaSyBxbnHLQTFJHPTRLMhvD88A70NAxdmCcQk",
+	  	authDomain: "bok7-314bb.firebaseapp.com",
+	  	databaseURL: "https://bok7-314bb.firebaseio.com",
+	  	projectId: "bok7-314bb",
+	  	storageBucket: "",
+	  	messagingSenderId: "75637353165"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	
 	<script>
 	/* search */
 
@@ -222,24 +236,12 @@
 				
 				if((value.title).search(myExp) != -1){
 					console.log(value.id);
-					$('.books-container').append("<div class='pl-2 pr-2' style='cursor:pointer;' onClick=\"window.location='detail.html?id="+value.id+"';\"><div class='card' style='width: 8rem;'><img class='card-img-top' src='static/resources/home/book"+value.id+".jpg' alt='Card image cap'><div class='audio-play text-center card-body p-1'><p class='card-text'><i class='far fa-play-circle'></i> Simple</p></div></div><div class='book-title'><p>Written by:<br>"+value.authors[0].first_name+value.authors[0].last_name+"<br><i class='text-warning fas fa-star'></i><i class='text-warning fas fa-star'></i><i class='text-warning fas fa-star'></i><i class='text-warning fas fa-star'></i><i class='text-warning fas fa-star-half-alt'></i></p></div></div>");
+					$('.books-container').append("<div class='pl-2 pr-2' style='cursor:pointer;' onClick=\"window.location='detail.html?id="+value.id+"';\"><div class='card' style='width: 8rem;'><img class='card-img-top' src='static/resources/home/book"+value.id+".jpg' alt='Card image cap'><div class='audio-play text-center card-body p-1'><p class='card-text'><i class='far fa-play-circle'></i> Simple</p></div></div><div class='book-title'><p style='width:8rem; height:42px;margin-bottom:0px; font-weight: 900;'>"+value.title+"</p><p style='width:8rem;'>Written by:<br>"+value.authors[0].first_name+value.authors[0].last_name+"<br><i class='text-warning fas fa-star'></i><i class='text-warning fas fa-star'></i><i class='text-warning fas fa-star'></i><i class='text-warning fas fa-star'></i><i claZ	ss='text-warning fas fa-star-half-alt'></i></p></div></div>");
 				}
 			});
 
 	    }); //get 
 	});
-	</script>
-	<script>
-	  // Initialize Firebase
-	  var config = {
-	  	apiKey: "AIzaSyBxbnHLQTFJHPTRLMhvD88A70NAxdmCcQk",
-	  	authDomain: "bok7-314bb.firebaseapp.com",
-	  	databaseURL: "https://bok7-314bb.firebaseio.com",
-	  	projectId: "bok7-314bb",
-	  	storageBucket: "",
-	  	messagingSenderId: "75637353165"
-	  };
-	  firebase.initializeApp(config);
 	</script>
 	<script src="static/js/auth.js"></script>
 
